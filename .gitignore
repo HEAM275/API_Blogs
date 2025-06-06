@@ -39,8 +39,6 @@ Thumbs.db
 *.log
 
 # Ignorar imágenes en la carpeta específica
-ecommerce_rest/products/imagenes/*
-
 *.jpg
 *.jpeg
 *.png
