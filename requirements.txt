@@ -1,10 +1,15 @@
 asgiref==3.8.1
 Django==5.2.2
+django-json-widget==2.0.1
+django-markdownx==4.0.9
 djangorestframework==3.16.0
 drf-yasg==1.21.10
 inflection==0.5.1
+Markdown==3.8
 packaging==25.0
+pillow==11.2.1
 psycopg2==2.9.10
+python-magic==0.4.27
 pytz==2025.2
 PyYAML==6.0.2
 sqlparse==0.5.3
