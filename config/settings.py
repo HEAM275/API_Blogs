@@ -37,6 +37,8 @@ THIRD_APPS = [
     'rest_framework',
     'drf_yasg',
     'psycopg2',
+    'markdownx',
+
 
 ]
 
@@ -44,6 +46,7 @@ LOCAL_APPS = [
     'core',
     'users',
     'post',
+    'authentication',
 ]
 
 
@@ -150,3 +153,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL = 'users.User'
+
+
+# Media rout
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# settings.py
+MARKDOWNX_EDITOR_RESIZABLE = True  # Editor redimensionable
+MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'  # Ruta para subir imágenes
