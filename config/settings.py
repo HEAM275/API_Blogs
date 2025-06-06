@@ -38,9 +38,6 @@ THIRD_APPS = [
     'drf_yasg',
     'psycopg2',
     'markdownx',
-    'django_json_widget',
-
-
 ]
 
 LOCAL_APPS = [
