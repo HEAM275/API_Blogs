@@ -1,0 +1,50 @@
+# Entorno virtual
+venv/
+.env/
+.venv/
+
+# Base de datos SQLite
+*.sqlite3
+*.sqlite3-journal
+db.sqlite3
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos y configuración
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Archivos de IDE/editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de Django
+/media/
+/staticfiles/
+*.log
+
+# Ignorar imágenes en la carpeta específica
+ecommerce_rest/products/imagenes/*
+
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+
+.qodo
