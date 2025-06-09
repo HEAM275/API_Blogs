@@ -1,48 +1,68 @@
 # Entorno virtual
+env/
 venv/
-.env/
-.venv/
-
-# Base de datos SQLite
+*.pyc
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
 *.sqlite3
-*.sqlite3-journal
-db.sqlite3
 
-# Archivos de Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-
-# Entornos y configuración
-.env
-.env.local
-.env.development
-.env.test
-.env.production
-
-# Archivos de IDE/editor
+# Configuración IDEs
 .idea/
 .vscode/
 *.swp
 *.swo
+*.sublime-project
 *.sublime-workspace
-
-# Archivos de sistema
-.DS_Store
-Thumbs.db
-
-# Archivos de Django
-/media/
-/staticfiles/
 *.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.dblite
+*.coverage
+htmlcov/
+.coverage.*
+.pytest_cache/
 
-# Ignorar imágenes en la carpeta específica
-*.jpg
-*.jpeg
-*.png
-*.gif
+# Archivos sensibles
+.env
+.env.local
+.env.development
+.env.test
+secrets.sh
 
+# Django
+media/
+staticfiles/
+instance/
+celerybeat-schedule
+*.log
+*.pot
+*.mo
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
 
-.qodo
+# Migraciones compiladas (si las usas en desarrollo)
+migrations/*.py
+migrations/__pycache__/
+
+# Paquetes descargados accidentalmente
+*.dist-info/
+*.egg-info/
+pip-selfcheck.json
+build/
+dist/
+*.egg
+*.so
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
