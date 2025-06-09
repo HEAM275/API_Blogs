@@ -1,19 +1,25 @@
+# apps/post/admin.py
 from django.contrib import admin
-from django.db import models
-from django.contrib.admin.widgets import AdminTextareaWidget
-from markdownx.widgets import AdminMarkdownxWidget  # Cambio clave aquí
+from apps.post.models.categoria import Categoria
+from apps.post.models.post import Post
+from apps.post.models.contenido_multimedia import ContenidoMultimedia
 
-from .models.models import Post
+
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('name', )
+    search_fields = ('name',)
 
 
 @admin.register(Post)
-class ArticuloAdmin(admin.ModelAdmin):
-    formfield_overrides = {
-        models.TextField: {'widget': AdminMarkdownxWidget},  # Widget cambiado
-    }
-    formfield_overrides = {
-        models.JSONField: {'widget': AdminTextareaWidget},
-    }
-    list_display = ['titulo', 'estado', 'autor', 'fecha_publicacion']
-    list_filter = ['estado', 'categoria']
-    search_fields = ['titulo', 'contenido']
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'autor', 'category',
+                    'estado', 'fecha_publicacion')
+    list_filter = ('estado', 'category')
+    prepopulated_fields = {'slug': ('titulo',)}
+    search_fields = ('titulo', 'contenido')
+
+
+@admin.register(ContenidoMultimedia)
+class ContenidoMultimediaAdmin(admin.ModelAdmin):
+    list_display = ('articulo', 'tipo', 'descripcion')

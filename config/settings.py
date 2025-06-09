@@ -8,7 +8,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+# sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -35,16 +35,17 @@ BASE_APPS = [
 
 THIRD_APPS = [
     'rest_framework',
+    'django_filters',
     'drf_yasg',
     'psycopg2',
     'markdownx',
 ]
 
 LOCAL_APPS = [
-    'core',
-    'users',
-    'post',
-    'authentication',
+    'apps.core',
+    'apps.users',
+    'apps.post',
+    'apps.authentication',
 ]
 
 

@@ -1,1 +1,1 @@
-from .serializer import *
+from apps.users.serializers import *

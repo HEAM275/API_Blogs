@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('markdownx/', include('markdownx.urls')),
     path('admin/', admin.site.urls),
+    path('api/post/', include('apps.post.urls')),        # Rutas de blog
+    path('api/users/', include('apps.users.urls')),
 ]
