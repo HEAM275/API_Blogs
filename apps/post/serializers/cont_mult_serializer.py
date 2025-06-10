@@ -21,13 +21,13 @@ class MultimediaCreateUpdateSerializer(MultimediaListSerializer):
             'id',
             'articulo',
             'archivo',
-            'archivo_url',
             'tipo',
             'descripcion',
-            'created_at',
-            'updated_at'
+            'created_by',
+            'created_date',
         ]
-        read_only_fields = ['created_at', 'updated_at', 'archivo_url']
+        read_only_fields = ['created_by', 'created_date', 'updated_date',
+                            'updated_by', 'deleted_by', 'deleted_date']
 
     def get_archivo_url(self, obj):
         request = self.context.get('request')

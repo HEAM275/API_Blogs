@@ -32,7 +32,7 @@ class PostListSerializer(serializers.ModelSerializer):
 class PostCreateUpdateSerializer(serializers.ModelSerializer):
     category = serializers.PrimaryKeyRelatedField(
         queryset=Categoria.objects.all(),
-        source='category'
+        # source='category'
     )
 
     class Meta:
@@ -75,8 +75,9 @@ class PostDetailSerializer(PostListSerializer):
             'imagen_portada_url',
             'multimedia',
             'slug',
-            'created_at',
-            'updated_at'
+            'created_date',
+            'created_by',
+            'updated_date',
         ]
 
     def get_imagen_portada_url(self, obj):

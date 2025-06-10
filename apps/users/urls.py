@@ -9,6 +9,9 @@ from apps.users.views.perfil_view import (
     CambiarPasswordView
 )
 
+from apps.users.views import PromoteToWriterView
+
+
 # Crear el router y registrar el ViewSet
 router = DefaultRouter()
 router.register(r'users', UserViewSet, basename='user')
@@ -22,10 +25,13 @@ router.register(r'users', UserViewSet, basename='user')
 # - DELETE   /api/users/{id}/
 # - POST     /api/users/{id}/activate/
 
+
 urlpatterns = [
     path('', include(router.urls)),
     path('perfil/', PerfilView.as_view(), name='perfil'),
     path('perfil/update/', PerfilUpdateView.as_view(), name='perfil-update'),
     path('perfil/change-password/',
          CambiarPasswordView.as_view(), name='change-password'),
+    path('promote/<int:user_id>/', PromoteToWriterView.as_view(),
+         name='promote_to_writer'),
 ]

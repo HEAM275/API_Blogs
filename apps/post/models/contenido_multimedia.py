@@ -4,6 +4,11 @@ from .post import Post
 
 
 class ContenidoMultimedia(models.Model):
+    TIPO_CONTENIDO = (
+        ('imagen', 'Imagen'),
+        ('video', 'Video')
+    )
+
     articulo = models.ForeignKey(
         Post,
         on_delete=models.CASCADE,

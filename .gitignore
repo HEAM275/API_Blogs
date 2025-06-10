@@ -1,68 +1,75 @@
 # Entorno virtual
 env/
 venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Paquetes de Python
 *.pyc
 __pycache__
-*.pyc
 *.pyo
 *.pyd
 *.db
 *.sqlite3
 
-# Configuración IDEs
+# Logs y archivos temporales
+*.log
+*.pot
+*.mo
+*.po
+*.mo
+*.db-journal
+local_settings.py
+db.sqlite3
+celerybeat-schedule
+
+# IDEs y editores
 .idea/
 .vscode/
+.substance/
+.atom/
+.pydevproject
+.erd
+.spyderproject
+.uvprojx
+.project
+.pyroject
+.c9revisions
 *.swp
 *.swo
 *.sublime-project
 *.sublime-workspace
-*.log
-*.pot
+*.komodoproject
+*.kdevelop
+*.kdev4
+*.wpr
+*.wpu
+*.ptvsd_unnamed_pipe*
+*.ptvsd_address*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon?
+apex
+*.orig
+*~
+*.bak
 *.pyc
 *.pyo
 *.pyd
-*.pyc
 *.dblite
 *.coverage
 htmlcov/
 .coverage.*
 .pytest_cache/
-
-# Archivos sensibles
-.env
-.env.local
-.env.development
-.env.test
-secrets.sh
-
-# Django
-media/
-staticfiles/
-instance/
-celerybeat-schedule
-*.log
-*.pot
-*.mo
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Migraciones compiladas (si las usas en desarrollo)
-migrations/*.py
-migrations/__pycache__/
-
-# Paquetes descargados accidentalmente
-*.dist-info/
-*.egg-info/
-pip-selfcheck.json
-build/
-dist/
-*.egg
-*.so
-
-# VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+tox.ini
+.coveragerc
+nosetests.xml
+.nox
+.hypothesis/
+.pytype/
+__pycache__/

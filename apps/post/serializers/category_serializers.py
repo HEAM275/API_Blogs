@@ -6,13 +6,13 @@ from apps.post.models.categoria import Categoria
 class CategoriaListSerializer(AuditableSerializerMixin, serializers.ModelSerializer):
     class Meta:
         model = Categoria
-        fields = ['id', 'nombre', 'created_date', 'created_by']
+        fields = ['id', 'name', 'created_date', 'created_by']
         read_only_fields = fields
 
 
 class CategoriaCreateUpdateSerializer(CategoriaListSerializer):
     class Meta(CategoriaListSerializer.Meta):
-        fields = ['nombre']
+        fields = ['name']
 
     def validate_name(self, value):
         if not value.strip():
